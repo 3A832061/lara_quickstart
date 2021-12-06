@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
+    return view('tasks');
 });
 Route::post('/task', function (Request $request) {
 
