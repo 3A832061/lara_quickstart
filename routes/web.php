@@ -1,6 +1,6 @@
 <?php
 
-use App\Task;
+use App\Models\Task;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Route;
@@ -43,5 +43,6 @@ Route::post('/task', function (Request $request) {
 });
 
 Route::delete('/task/{task}', function (Task $task) {
-
+    $task->delete();
+    return redirect('/');
 });
